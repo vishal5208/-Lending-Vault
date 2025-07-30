@@ -10,9 +10,9 @@ This project simulates a basic lending vault mechanism using USDT. The contract 
 3. Compile contracts:  `npx hardhat compile`
 
 ## Contract Addresses & ABI
-1. USDT Token(Mock ERC20 for testing) : 
-2. SimpleVault(Vault logic) : 
-3. StrategyVault(deposit and withdraw logic) : 
+1. USDT Token(Mock ERC20 for testing) : `0x3f2b1C57ab1094F8c157C3a2551C7D710766C7Bb`
+2. SimpleVault(Vault logic) : `0x9E899bB779155C592eF986EAB1A95996Bc316D85`
+3. StrategyVault(deposit and withdraw logic) : `0x10f097D2a504eFFcE6683E891E109c6d647b2192`
 
 `ABI files are located in the artifacts/ directory after compilation.`
 

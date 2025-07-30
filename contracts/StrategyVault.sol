@@ -3,7 +3,11 @@ pragma solidity ^0.8.20;
 
 interface IERC20 {
     function transfer(address recipient, uint amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint amount) external returns (bool);
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint amount
+    ) external returns (bool);
 
     // Mint function for testing or mock tokens
     function mint(address to, uint256 amount) external;
@@ -13,7 +17,7 @@ interface IERC20 {
 // 1.38.45
 
 contract StrategyVault {
-    address public simpleVault;  // Authorized caller
+    address public simpleVault; // Authorized caller
     address public usdt;
 
     uint256 public ethBalance;
@@ -27,9 +31,11 @@ contract StrategyVault {
         _;
     }
 
-
     constructor(address _usdt, address _simpleVault) payable {
-        require(msg.value > 0.01 ether, "deployer must send greater than 0.01 ether"); // buffer 
+        require(
+            msg.value >= 0.001 ether,
+            "deployer must send greater than 0.001 ether"
+        ); // buffer
 
         usdt = _usdt;
         simpleVault = _simpleVault;

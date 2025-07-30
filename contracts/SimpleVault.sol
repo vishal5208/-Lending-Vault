@@ -45,10 +45,9 @@ contract SimpleVault {
         _;
     }
 
-    constructor(address _usdt, address _strategyVault) {
+    constructor(address _usdt) {
         admin = msg.sender;
         usdt = _usdt;
-        strategyVault = _strategyVault;
     }
 
     // Deposit ETH
